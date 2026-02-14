@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine Ara Imupss 💖 | From Ridzz</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            min-height: 100vh;
+            background: linear-gradient(145deg, #ffdde1 0%, #ffb6c1 50%, #ff9eb5 100%);
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        /* ANIMATED BACKGROUND ELEMENTS */
+        .floating-hearts, .floating-flowers {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        .heart {
+            position: absolute;
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.6);
+            animation: floatUp 8s infinite ease-in;
+        }
+        
+        .flower {
+            position: absolute;
+            font-size: 24px;
+            opacity: 0.4;
+            animation: floatSide 12s infinite alternate;
+        }
+        
+        @keyframes floatUp {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.8; }
+            100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+        }
+        
+        @keyframes floatSide {
+            0% { transform: translateX(0) rotate(0deg); }
+            100% { transform: translateX(100px) rotate(20deg); }
+        }
+        
+        /* MAIN CONTENT */
+        .container {
+            position: relative;
+            z-index: 10;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* TITLE SECTION */
+        .title-section {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 60px 60px 30px 30px;
+            margin: 20px 0 40px;
+            box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+        }
+        
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 3.5em;
+            color: #fff;
+            text-shadow: 3px 3px 0 #ff69b4, 6px 6px 0 rgba(255, 20, 147, 0.3);
+            margin-bottom: 20px;
+            animation: glitter 2s infinite;
+        }
+        
+        @keyframes glitter {
+            0% { text-shadow: 3px 3px 0 #ff69b4, 6px 6px 0 rgba(255, 20, 147, 0.3); }
+            50% { text-shadow: 5px 5px 0 #ff1493, 10px 10px 0 rgba(255, 105, 180, 0.5); }
+            100% { text-shadow: 3px 3px 0 #ff69b4, 6px 6px 0 rgba(255, 20, 147, 0.3); }
+        }
+        
+        /* PHOTO GALLERY */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin: 50px 0;
+        }
+        
+        .photo-frame {
+            width: 200px;
+            height: 250px;
+            position: relative;
+            animation: float 3s ease-in-out infinite;
+            transform-origin: center;
+            filter: drop-shadow(0 15px 25px rgba(0,0,0,0.2));
+        }
+        
+        .photo-frame:nth-child(1) { animation-delay: 0s; }
+        .photo-frame:nth-child(2) { animation-delay: 0.4s; }
+        .photo-frame:nth-child(3) { animation-delay: 0.8s; }
+        .photo-frame:nth-child(4) { animation-delay: 1.2s; }
+        .photo-frame:nth-child(5) { animation-delay: 1.6s; }
+        
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(2deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+        
+        .crown {
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 40px;
+            z-index: 15;
+            filter: drop-shadow(0 5px 10px gold);
+            animation: crownGlow 2s infinite;
+        }
+        
+        @keyframes crownGlow {
+            0% { filter: drop-shadow(0 5px 10px gold); }
+            50% { filter: drop-shadow(0 5px 20px #ff69b4); }
+            100% { filter: drop-shadow(0 5px 10px gold); }
+        }
+        
+        .photo-card {
+            width: 100%;
+            height: 100%;
+            background: white;
+            border-radius: 30px 30px 30px 30px;
+            padding: 12px;
+            box-shadow: 0 10px 25px rgba(255, 105, 180, 0.5);
+            border: 4px solid white;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .photo-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .photo-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+            transform: rotate(45deg);
+            animation: shine 4s infinite;
+        }
+        
+        @keyframes shine {
+            0% { transform: translateX(-100%) rotate(45deg); }
+            20% { transform: translateX(100%) rotate(45deg); }
+            100% { transform: translateX(100%) rotate(45deg); }
+        }
+        
+        .photo-placeholder {
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #ffd1dc; /* fallback */
+        }
+        
+        /* LOVE LETTER SECTION */
+        .letter-section {
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(15px);
+            border-radius: 50px 50px 30px 30px;
+            padding: 40px;
+            margin: 40px 0;
+            border: 3px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 20px 40px rgba(255, 105, 180, 0.4);
+            position: relative;
+        }
+        
+        .letter-content {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #d43f6b;
+            text-align: left;
+            padding: 30px;
+            background: rgba(255, 240, 245, 0.7);
+            border-radius: 30px;
+            white-space: pre-wrap;
+            word-break: break-word;
+            box-shadow: inset 0 0 20px rgba(255, 192, 203, 0.5);
+        }
+        
+        /* AUDIO PLAYER */
+        .music-player {
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            border-radius: 60px;
+            padding: 15px 25px;
+            margin: 30px 0;
+            text-align: center;
+            border: 2px solid white;
+        }
+        
+        audio {
+            width: 100%;
+            max-width: 400px;
+            height: 45px;
+            border-radius: 30px;
+            outline: none;
+        }
+        
+        audio::-webkit-media-controls-panel {
+            background: #ffb6c1;
+        }
+        
+        /* FOOTER */
+        .footer {
+            text-align: center;
+            padding: 30px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5em;
+            color: white;
+            text-shadow: 2px 2px 0 #ff69b4;
+            margin-top: 50px;
+            background: rgba(255, 182, 193, 0.4);
+            backdrop-filter: blur(5px);
+            border-radius: 100px 100px 30px 30px;
+        }
+        
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2em; }
+            .photo-frame { width: 150px; height: 200px; }
+            .letter-content { font-size: 1em; padding: 20px; }
+            .footer { font-size: 1.2em; }
+        }
+    </style>
+</head>
+<body>
+    <!-- FLOATING HEARTS -->
+    <div class="floating-hearts" id="hearts"></div>
+    
+    <!-- FLOATING FLOWERS -->
+    <div class="floating-flowers" id="flowers"></div>
+
+    <div class="container">
+        <!-- TITLE SECTION -->
+        <div class="title-section">
+            <h1>💖 Happy Valentine's Day 💖</h1>
+            <h2 style="color: white; font-family: 'Poppins'; font-size: 1.8em; font-weight: 300;">For My Dearest Ara Imupss</h2>
+        </div>
+
+        <!-- PHOTO GALLERY WITH CROWNS -->
+        <div class="gallery">
+            <!-- PHOTO 1 - foto.jpg1 -->
+            <div class="photo-frame">
+                <div class="crown">👑</div>
+                <div class="photo-card">
+                    <div class="photo-placeholder" id="photo1" style="background-image: url('foto1.jpg');"></div>
+                </div>
+            </div>
+            
+            <!-- PHOTO 2 - foto.jpg2 -->
+            <div class="photo-frame">
+                <div class="crown">👑</div>
+                <div class="photo-card">
+                    <div class="photo-placeholder" id="photo2" style="background-image: url('foto.jpg2');"></div>
+                </div>
+            </div>
+            
+            <!-- PHOTO 3 - foto.jpg3 -->
+            <div class="photo-frame">
+                <div class="crown">👑</div>
+                <div class="photo-card">
+                    <div class="photo-placeholder" id="photo3" style="background-image: url('foto.jpg3');"></div>
+                </div>
+            </div>
+            
+            <!-- PHOTO 4 - foto.jpg4 -->
+            <div class="photo-frame">
+                <div class="crown">👑</div>
+                <div class="photo-card">
+                    <div class="photo-placeholder" id="photo4" style="background-image: url('foto.jpg4');"></div>
+                </div>
+            </div>
+            
+            <!-- PHOTO 5 - foto.jpg5 -->
+            <div class="photo-frame">
+                <div class="crown">👑</div>
+                <div class="photo-card">
+                    <div class="photo-placeholder" id="photo5" style="background-image: url('foto.jpg5');"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- LOVE LETTER SECTION -->
+        <div class="letter-section">
+            <div class="letter-content" id="loveLetter">
+                Heyyy Araaaa comee hereeee , selamattt hariii valentineee yaaaa sayanggggg , Ridzwan senengg kitaaa bisaaa sjauuh inii xixixixi , kamuu ingattt gkkk awall kitaaa kenall??? dulu kitaaa SE toxiccc ituuu yaaaa tetapiii ketikaaaa sampeeeee sekarangg hubungann kitaaa seromnatisss ituu lohhh yaaaa , i loveee uuuuuu forever 💐🤍💖💖 , xixixi bahkannn guruuu akuuu bilanggg hubungann kitaaa lucuuwwww hehehehe saltingg manaa lagii presentasi😅 , makasihh yaaa sekaliii lagiiiiii kamuu selaluuu maafkann akuuuu kalowwww akuuu adaa salahh atauu nyakitinnnnn hatiii kamuuuu , tapii percayaaa lahh cintaaaa akuu keee kamuuu gkkk mainnn mainnnnn gkkkk sembarangan jugaaa ,,,, cowokkk manaaa yangg gkk takuttt kehilangann ceweee secantikk see imupsss Wee gemashhh iniii omayyygattttttttttt loveee uuu dedeee ridzwannnn  🍭💮💖🎉 , kitaaaa jalaniii hubungannnn udahhh lumayannn lamaaa yaaa sayangg cintaaa cantikkk , sekarangg udahhh harii valentineeee ajaaa nieeeeeeeeee percayaaa gkkkkkkk akuu tuhhhhh sayanggggg bangettttt pakeeee bangettttt samaaaa kamuuuuuuuu xixixixixi , maaafff yaaaa kalowww ridzwannn selamaa iniii banyakkk salahhh smaaaaa araaa imupsss cwantikk , tapiiiii kamuuu sukaaaa maaafinnn akuuu walauuu yaaaa prengatt prengutt😭😖 , tapiii akuu sukaaa ituuuuuuu xixixixi makasihhhh yaaaa udhahhh nemeninnnn sampeee sinii semogaaaa bisaaa neemeninnn selamnyaaaa yaaaa sayangg cintaaa bageurrr cwantikkk imupsss ratuuuu  , selamattt hariiii valentineee forr araaa imupsss🎀🎈🎂🎉💖💮💮🍭🎊💐💐💐🤍🌈⚡
+            </div>
+        </div>
+
+        <!-- MUSIC PLAYER -->
+        <div class="music-player">
+            <p style="color: white; margin-bottom: 10px; font-family: 'Poppins'; font-size: 1.2em;">🎵 Our Valentine Song 🎵</p>
+            <audio id="valentineSong" controls loop>
+                <source src="audio.gw" type="audio/mpeg">
+                Browser lu ketinggalan zaman, gak bisa puter audio.
+            </audio>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <p>From Ridzz for Ara Imupss 🤍</p>
+            <p style="font-size: 0.6em; font-family: Poppins;">© RidzzCnx Valentine Special 2025</p>
+        </div>
+    </div>
+
+    <script>
+        // Generate floating hearts
+        function createHearts() {
+            const heartsContainer = document.getElementById('hearts');
+            for (let i = 0; i < 30; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'heart';
+                heart.innerHTML = ['❤️', '💖', '💗', '💓', '💕', '💞'][Math.floor(Math.random() * 6)];
+                heart.style.left = Math.random() * 100 + '%';
+                heart.style.animationDuration = (Math.random() * 5 + 5) + 's';
+                heart.style.animationDelay = Math.random() * 5 + 's';
+                heart.style.fontSize = (Math.random() * 20 + 15) + 'px';
+                heartsContainer.appendChild(heart);
+            }
+        }
+
+        // Generate floating flowers
+        function createFlowers() {
+            const flowersContainer = document.getElementById('flowers');
+            for (let i = 0; i < 20; i++) {
+                const flower = document.createElement('div');
+                flower.className = 'flower';
+                flower.innerHTML = ['🌸', '🌼', '🌻', '🌺', '🌷', '💐'][Math.floor(Math.random() * 6)];
+                flower.style.left = Math.random() * 100 + '%';
+                flower.style.top = Math.random() * 100 + '%';
+                flower.style.animationDuration = (Math.random() * 8 + 5) + 's';
+                flower.style.animationDelay = Math.random() * 5 + 's';
+                flower.style.fontSize = (Math.random() * 25 + 20) + 'px';
+                flowersContainer.appendChild(flower);
+            }
+        }
+
+        // Initialize everything
+        createHearts();
+        createFlowers();
+
+        // Auto-play audio (with user interaction requirement)
+        document.addEventListener('click', function() {
+            const audio = document.getElementById('valentineSong');
+            if (audio.paused) {
+                audio.play().catch(e => console.log('Autoplay prevented, click required'));
+            }
+        });
+    </script>
+</body>
+</html>
